@@ -8,6 +8,6 @@ ARG USER=vscode
 VOLUME /home/$USER/.m2
 VOLUME /home/$USER/.gradle
 
-ARG JAVA_VERSION=java 17.0.4.1-ms
+ARG JAVA_VERSION=17.0.4.1-ms
 RUN bash -c "source /usr/local/sdkman/bin/sdkman-init.sh && sdk list java"
 RUN bash -lc '. /usr/local/sdkman/bin/sdkman-init.sh && sdk install java $JAVA_VERSION && sdk use java $JAVA_VERSION'
