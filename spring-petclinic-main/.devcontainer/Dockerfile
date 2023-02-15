@@ -14,3 +14,8 @@ RUN sudo mkdir -p /home/$USER/.m2 /home/$USER/.gradle && sudo chown $USER:$USER 
 RUN curl -s "https://get.sdkman.io" | bash
 RUN bash -c "source /usr/local/sdkman/bin/sdkman-init.sh && sdk list java"
 RUN bash -lc '. /usr/local/sdkman/bin/sdkman-init.sh && sdk install java $JAVA_VERSION && sdk use java $JAVA_VERSION'
+ENV JAVA_HOME="/usr/local/sdkman/java/java/current"
+ENV PATH="$JAVA_HOME/bin:$PATH"
+
+ENTRYPOINT ["/bin/bash", "-c", "source /usr/local/sdkman/bin/sdkman-init.sh && \"$@\"", "-s"]
+CMD ["sdk", "help"]
