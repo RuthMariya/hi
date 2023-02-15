@@ -9,7 +9,7 @@ ARG USER=vscode
 VOLUME /home/$USER/.m2
 VOLUME /home/$USER/.gradle
 
-ARG JAVA_VERSION=17.0.4.1-ms
+ARG JAVA_VERSION=17.0.4.1-sem
 RUN sudo mkdir -p /home/$USER/.m2 /home/$USER/.gradle && sudo chown $USER:$USER /home/$USER/.m2 /home/$USER/.gradle
 RUN curl -s "https://get.sdkman.io" | bash
 RUN bash -c "source /usr/local/sdkman/bin/sdkman-init.sh && sdk list java"
