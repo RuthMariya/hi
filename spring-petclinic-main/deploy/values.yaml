@@ -7,7 +7,7 @@ strategy:
   type: Recreate
 upgrade: false  
 
-health_check: false
+health_check: true
 
 #Persistence storage
 persistentVolume:
