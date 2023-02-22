@@ -9,6 +9,20 @@ upgrade: false
 
 health_check: false
 
+#Persistence storage
+persistentVolume:
+  enabled: true
+  # Specifies if claim is already there otherwise make it blank to create PVC
+  existingClaim: ""
+  annotations:
+    helm.sh/resource-policy: "keep"
+  size: 10Gi
+  accessModes: ReadWriteMany
+  # Provide the storage class name based on the target cluster you are deploying to
+  storageClassName: "default"
+  # Provide the host path needed to use for creating PV if storageClassName is local-storage else leave it empty
+  hostPath: ""
+
 
 image:
   repository: gbsartifactory.edst.ibm.com/internet-banking/pet-clinic
