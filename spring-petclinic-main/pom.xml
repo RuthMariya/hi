@@ -124,12 +124,12 @@
       <version>6.8</version>  
       <scope>compile</scope>  
     </dependency>  
-    <dependency>  
+<!--     <dependency>  
       <groupId>com.google.inject</groupId>  
       <artifactId>guice</artifactId>  
       <version>4.1.0</version>  
       <classifier>no_aop</classifier>  
-    </dependency>  
+    </dependency>   -->
     <dependency>  
       <groupId>org.seleniumhq.selenium</groupId>  
       <artifactId>selenium-java</artifactId>  
@@ -140,12 +140,12 @@
       <artifactId>selenium-chrome-driver</artifactId>  
       <version>2.50.0</version>  
     </dependency>  
-    <dependency>  
+<!--     <dependency>  
       <groupId>com.google.guava</groupId>  
       <artifactId>guava</artifactId>  
       <version>22.0</version>  
-    </dependency>  
-    <dependency>  
+    </dependency>   -->
+<!--     <dependency>  
       <groupId>com.google.api-client</groupId>  
       <artifactId>google-api-client-appengine</artifactId>  
       <version>1.23.0</version>  
@@ -155,12 +155,12 @@
       <artifactId>guava-jdk5</artifactId>  
       </exclusion>  
       </exclusions>  
-    </dependency>  
-    <dependency>  
+    </dependency>   -->
+<!--     <dependency>  
       <groupId>com.google.code.gson</groupId>  
       <artifactId>gson</artifactId>  
       <version>2.2.4</version>  
-    </dependency> 
+    </dependency>  -->
 
   </dependencies>
 
