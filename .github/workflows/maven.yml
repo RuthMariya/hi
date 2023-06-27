@@ -39,6 +39,29 @@ jobs:
       -
         name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
+        
+  sendEmail:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Send email notification
+        uses: RuthMariya/action-send-mail@v2
+        with:
+          server_address: ${{ secrets.SMTP_SERVER }}
+          server_port: ${{ secrets.SMTP_PORT }}
+          username: ${{ secrets.SMTP_USERNAME }}
+          password: ${{ secrets.SMTP_PASSWORD }}
+          subject: GitHub Actions Notification
+          body: |
+            Your Maven project has been built successfully.
+
+            Commit SHA: ${{ github.sha }}
+            Commit Message: ${{ github.event.head_commit.message }}
+
 
   
 
