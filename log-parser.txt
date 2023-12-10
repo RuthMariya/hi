@@ -1,5 +1,5 @@
 # match line starting with 'error ', case-insensitive
-error /Error /
+error /Error/
 
 # list of warnings here...
 warning /WARNING/
